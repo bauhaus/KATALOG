@@ -9,7 +9,7 @@ class Person < ActiveRecord::Base
   
   belongs_to :department
   
-  has_and_belongs_to_many :study_modules
+  has_and_belongs_to_many :teaching_assignments, :class_name => 'StudyModule'
   
   validates_presence_of :first_name, :last_name
   
@@ -28,5 +28,9 @@ class Person < ActiveRecord::Base
   
   def institution?
     institution
+  end
+  
+  def study_modules
+    StudyModule.joins(:things => :credits).where(:credits => :person_id.eq % self.id)
   end
 end
