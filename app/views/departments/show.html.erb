@@ -17,6 +17,13 @@
 <% content_for :sidebar do -%>
 	<% if @department.head_of_department.present? -%>
 		<h2>Head of department</h2>
-		<%= @department.head_of_department.full_name %>
+		<%= link_to @department.head_of_department.full_name, @department.head_of_department %>
+	<% end -%>
+	
+	<% if @department.study_modules.present? -%>
+	<h2>Study Modules</h2>
+	<p>
+		<%= comma_separated_links_for @department.study_modules, :name %>
+	</p>
 	<% end -%>
 <% end -%>
