@@ -186,7 +186,7 @@ header #site-button {
   height: 17px;
   width: 66px;
   margin-right: 8px;
-  top: 4px;
+  top: 8px;
   background-image: url(../images/bau_haus-sitebutton-17px.png);
 }
 header #site-img { -webkit-transition: all 2s ease-out; }
