@@ -183,11 +183,11 @@ header {
 header #site-button {
   float: left;
   position: relative;
-  height: 23px;
-  width: 89px;
+  height: 17px;
+  width: 66px;
   margin-right: 8px;
   top: 4px;
-  background-image: url(../images/bau_haus-sitebutton-23px.png);
+  background-image: url(../images/bau_haus-sitebutton-17px.png);
 }
 header #site-img { -webkit-transition: all 2s ease-out; }
 header #site-img:hover {
