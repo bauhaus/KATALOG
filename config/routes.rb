@@ -1,4 +1,6 @@
 Katalog::Application.routes.draw do |map|
+  resources :thing_lists
+
   resources :departments
 
   devise_for :users,

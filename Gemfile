@@ -34,3 +34,6 @@ gem 'ruby-debug'
 
 # Use awesome_nested_set as replacement for acts_as_nested_set
 # gem 'awesome_nested_set' # awesome_nested_set is installed as plugin
+
+# Use acts_as_list for thing lists
+gem 'acts_as_list'

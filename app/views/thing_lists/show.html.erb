@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+<h2>List: <%= @thing_list.title %></h2>
+  
+<ul>
+<% @thing_list.thing_list_items.each do |item| %>
+	<li><%= item.thing.title %></li>
+<% end -%>
+</ul>
+
+
+<%= link_to 'Edit', edit_thing_list_path(@thing_list) %> |
+<%= link_to 'Back', thing_lists_path %>
