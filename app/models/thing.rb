@@ -11,6 +11,8 @@ class Thing < ActiveRecord::Base
   has_many :kontext_links, :as => :kontextable
   has_many :kontexts, :through => :kontext_links
   
+  has_many :thing_list_items
+  
   has_and_belongs_to_many :study_modules
   
   validates_presence_of :title, :description, :credits, :dimensions_x,
