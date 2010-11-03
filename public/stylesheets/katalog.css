@@ -180,23 +180,9 @@ header {
   height: 2em;
   overflow: hidden;
 }
-header #site-button {
-  float: left;
-  position: relative;
-  height: 23px;
-  width: 89px;
-  margin-right: 8px;
-  top: 4px;
-  background-image: url(../images/bau_haus-sitebutton-23px.png);
-}
-header #site-img { -webkit-transition: all 2s ease-out; }
-header #site-img:hover {
-  opacity: 0;
-  -webkit-transition: all 0.2s ease-out;
-}
-header #site-title {
+header h1#site-title {
   font-size: 1.2em;
-  line-height: 1em;
+  line-height: 2em;
   font-weight: bold;
   letter-spacing: 1.5px;
   text-align: center;
@@ -204,17 +190,14 @@ header #site-title {
   color: #444444;
   float: left;
   clear: none;
-}
-header #site-title h1 {
-  line-height: 2em;
   margin: 0;
 }
-header #site-title a {
+header h1#site-title a {
   text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
   text-decoration: none;
   -webkit-transition: all 3s ease-in;
 }
-header #site-title a:hover { -webkit-transition: all 0.2s ease-in; }
+header h1#site-title a:hover { -webkit-transition: all 0.2s ease-in; }
 header #user span {
   margin-left: 0.8em;
   margin-right: 0.8em;
@@ -472,9 +455,7 @@ footer {
   border-top-style: solid;
   border-top-width: 1px;
   margin-bottom: 1em;
-  font-size: 0.625em;
-  letter-spacing: 0.15em;
-  text-align: center;
+  font-size: 0.7em;
 }
 #access .user {
   font-style: italic;

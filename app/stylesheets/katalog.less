@@ -14,7 +14,7 @@
 @paper-dark: #ebebeb; /* 92% grey */
 .paper-dark { background-color: @paper-dark;}
 
-@text-color: #333333; /* 10% black */ 
+@text-color: #333333; /* 90% black */ 
 .text-color { color: @text-color}
 
 @special-color: #36a4b6; /* turquoise */ 
@@ -223,27 +223,9 @@ header {
 	height: 2em;
 	overflow: hidden;
 	
-	#site-button {
-		float: left;
-		position: relative;
-		height: 23px;
-		width: 89px;
-		margin-right: 8px;
-		top: 4px;
-		background-image: url(../images/bau_haus-sitebutton-23px.png);
-	}
-
-	#site-img {
-		-webkit-transition: all 2s ease-out;
-	}
-	#site-img:hover {
-		opacity: 0;
-		-webkit-transition: all 0.2s ease-out;
-	}
-	
-	#site-title {
+	h1#site-title {
 		font-size: 1.2em;
-		line-height: 1em;
+		line-height: 2em;
 		font-weight: bold;
 		letter-spacing: 1.5px;
 		text-align: center;
@@ -251,11 +233,7 @@ header {
 		color: #444;
 		float: left;
 		clear: none;
-		
-		h1 {
-			line-height: 2em;
-			margin: 0;
-		}
+		margin:0;
 		
 		a {
 			text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
@@ -528,9 +506,7 @@ footer {
 	.block-shadow;
 	.block-shiny;
 	margin-bottom: 1em;
-	font-size: 0.625em;
-	letter-spacing: 0.15em;
-	text-align: center;
+	font-size: 0.7em;
 }
 
 /* ============== */
