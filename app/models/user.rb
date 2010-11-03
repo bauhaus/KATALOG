@@ -11,6 +11,8 @@ class User < ActiveRecord::Base
   
   validates :username, :presence => true, :uniqueness => true
   
+  ROLES = %w{ student teacher }
+  
   # Enable Login with username OR email
   def self.find_for_database_authentication(conditions={})
     input = conditions[:email].gsub(/[%_]/,'')
@@ -28,6 +30,10 @@ class User < ActiveRecord::Base
   
   def admin?
     self.admin
+  end
+  
+  def teacher?
+    self.role == 'teacher'
   end
   
   def full_name

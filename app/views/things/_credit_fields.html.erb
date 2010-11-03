@@ -1,6 +1,8 @@
 <p class="fields">
   <%= f.collection_select(:person_id, Person.asc, :id, :full_name, {:prompt => ""}) %>
   <%= f.label :role, 'with role' %>
-  <%= f.text_field :role, :size => 14 %>
+  <%= f.text_field :role, :size => 14 %><br />
+  <%= f.label :tools, 'and tools' %>
+  <%= f.text_field :tools, :size => 24 %>
   <%= link_to_remove_fields 'remove', f %>
 </p>

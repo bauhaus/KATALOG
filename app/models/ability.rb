@@ -35,6 +35,10 @@ class Ability
         group.user == user
       end
       
+      can :manage, StudyModule do |study_module|
+        user.teacher?
+      end
+      
       # admins
       if user.admin?
         can :manage, :all

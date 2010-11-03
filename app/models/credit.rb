@@ -4,5 +4,5 @@ class Credit < ActiveRecord::Base
   
   validates_presence_of :person, :role
   
-  attr_accessible :person_id, :role
+  attr_accessible :person_id, :role, :tools
 end
