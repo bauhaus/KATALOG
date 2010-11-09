@@ -1,6 +1,6 @@
 class ThingListsController < ApplicationController
   
-  # layout nil, :only => [:show]
+  layout nil, :only => [:show]
   
   # GET /thing_lists
   # GET /thing_lists.xml
