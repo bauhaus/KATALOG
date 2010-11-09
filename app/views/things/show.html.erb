@@ -57,7 +57,7 @@
 		<% end -%></p>
 	
 		<% if @thing.tools.any? -%>
-		<p>Made with <%= @thing.tools %></p>
+		<p>Made with <%= @thing.tools.to_sentence %></p>
 		<% end -%>
 	</div> <!-- end #entry-form -->
 

@@ -15,19 +15,23 @@ class Thing < ActiveRecord::Base
   
   has_and_belongs_to_many :study_modules
   
-  validates_presence_of :title, :description, :credits, :dimensions_x,
-    :dimensions_unit, :kind, :materials, :license, :release_date
+  validates_presence_of :title, :description, :credits, :kind, :materials, 
+    :license, :release_date
   validates_associated :credits, :images
   
   attr_accessible :title, :description, :credits_attributes, :images_attributes,
     :kontext_ids, :license, :kind, :materials, :dimensions_x, :dimensions_y,
-    :dimensions_z, :dimensions_unit, :dimensions_additional, :tools, :release_date, 
+    :dimensions_z, :dimensions_unit, :dimensions_additional, :release_date, 
     :start_date, :study_module_ids
   
   def dimensions
     result = [dimensions_x, dimensions_y, dimensions_z].compact.join('×')
     result += " #{dimensions_unit}" if dimensions_unit.present?
     result if result.present?
+  end
+  
+  def tools
+    self.credits.map(&:tools).uniq
   end
   
   scope :asc, order('title')
